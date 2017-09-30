@@ -1,2 +1,2 @@
 ## NodeJS
-Learning nodejs, basic server setup, package.
+Learning nodejs, basic server setup. 
