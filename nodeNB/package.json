@@ -1,0 +1,17 @@
+{
+  "name": "prashant",
+  "version": "0.0.0",
+  "description": "learning purpose",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "prashant"
+  ],
+  "author": "prashant",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
