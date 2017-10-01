@@ -1,0 +1,23 @@
+{
+  "name": "reciepe",
+  "version": "0.0.1",
+  "description": "Receipe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "receipe"
+  ],
+  "author": "prashant",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "*",
+    "consolidate": "*",
+    "dust": "*",
+    
+    "dustjs-linkedin": "*",
+    "express": "*",
+    "pg":"*"
+  }
+}
