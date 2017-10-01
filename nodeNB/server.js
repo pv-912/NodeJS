@@ -27,13 +27,41 @@
 // http.createServer(onRequest).listen(port);
  
 
+
+
 // with using connect module
  var connect = require('connect');
- var http = require('http');
+ var http    = require('http');
 
- var app = connect();
- var port = 2020;
+ var app     = connect();
+ var port    = 2020;
 
+ // // uses of next
+
+ // function frame(res,req,next){
+ // 	console.log('request by frame');
+ // 	next();
+ // }
+
+ // function frame2(res,req,next){
+ // 	console.log('request by frame22');  //next is use to tell the function that it should run once more a their is one more function ahead to it... if u dont use next()  th funstion will stop at that point 
+ // }
+
+ // app.use('/frame',frame);
+ // app.use('/frame2',frame2);
+
+
+
+ function frame(res,req){
+ 	console.log('request by frame');
+ }
+
+ function frame2(res,req){
+ 	console.log('request by frame22');
+ }
+
+ app.use('/frame',frame);
+ app.use('/frame2',frame2);
 
  http.createServer(app).listen(port);
 
