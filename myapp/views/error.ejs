@@ -1,39 +1,3 @@
 <h1><%= message %></h1>
 <h2><%= error.status %></h2>
 <pre><%= error.stack %></pre>
-import React from 'react';
-import Navbar from './Navbar';
-import NavbarMobile from './mobile/Navbar';
-import {Bottom} from './Bottom';
-
-export default class ProfileMain extends React.Component{
-    constructor(){
-        super();
-        this.state = {}
-    }
-    componentWillMount(){
-        window.innerWidth > 560 ? this.setState({mobile: false}) : this.setState({mobile: true});
-    }
-    render(){
-        return(
-            <div className="body">
-            {this.state.mobile ? <NavbarMobile /> : <Navbar />}
-                <Bottom />
-                <div className="container-fluid">
-                    <div style={this.state.mobile ? {marginTop:"15px", marginBottom:"50px", height: "100vh"} : {marginTop:"150px", marginBottom:"50px", height: "100vh"}}>
-                        <div className="row no-margin-row-team" style={{color:"white", fontSize:"1em"}}>
-                            <div className="col-md-offset-2 col-md-8" style={{display: "flex", justifyContent: "center"}}>
-                                <div className="contact-us-img" style={{marginBottom: "50px"}}>
-                                    <p className="contact-us" style={{fontFamily: 'prashant'}}>
-                                        Pronites
-                                    </p>
-                                </div>
-                            </div>
-                        </div> 
-                        <center><img src="/img/main/updating.png" width='950' /></center>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
